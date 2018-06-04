@@ -84,7 +84,7 @@ Route::group(['middleware' => ['web']], function () {
 
 	//Product
 	Route::get('san-pham', 'ProductPoolController@getProductPool');
-	Route::get('san-pham/tao-moi', 'ProductPoolController@filterProduct');
+	Route::get('san-pham/{id}', 'ProductPoolController@filterProduct');
 
 	Route::get('san-pham/delete/{id}', 'ProductPoolController@delete');
 	
