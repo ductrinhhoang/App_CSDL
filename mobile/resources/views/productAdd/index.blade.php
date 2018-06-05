@@ -19,7 +19,16 @@
 						{!! Form::control('text', 4, 'phanGiai', $errors, 'Độ phân giải') !!}
 						{!! Form::control('text', 4, 'CPU', $errors, 'CPU') !!}
 						{!! Form::control('text', 4, 'heDieuHanh', $errors, 'Hệ điều hành') !!}
-						{!! Form::control('text', 4, 'RAM', $errors, 'RAM') !!}
+						<div class='col-lg-4'>
+							<label for="RAM">RAM</label>
+							<select class="form-control" id="RAM" name='RAM'>
+								<option selected='selected'>512 MB</option>
+								<option>1 GB</option>
+								<option>2 GB</option>
+								<option>3 GB</option>
+								<option>4 GB</option>
+							</select>
+						</div>
 						{!! Form::control('text', 4, 'mayAnhChinh', $errors, 'Máy ảnh chính') !!}
 						{!! Form::control('text', 4, 'boNhoTrong', $errors, 'Bộ nhớ trong') !!}
 						{!! Form::control('text', 4, 'dungLuongPin', $errors, 'Dung lượng pin') !!}

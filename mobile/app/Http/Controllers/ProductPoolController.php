@@ -11,7 +11,7 @@ class ProductPoolController extends Controller
 {
     
     public function getProductPool(){
-        $products = ProductPool::all();
+        $products = ProductPool::all() -> reverse();
         $manufactures = ['SAMSUNG', 'APPLE', 'HUAWEI', 'OPPO'];
         return view('productPool.index', compact('products', 'manufactures'));
     }

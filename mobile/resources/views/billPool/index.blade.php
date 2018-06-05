@@ -18,6 +18,7 @@
                     <th>Sản phẩm</th>
                     <th>Số lượng</th>
                     <th>Thành tiền</th>
+                    <th>Ngày nhập</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,6 +43,7 @@
                             </td>
                             <td>{{$bill -> soLuong}}</td>
                             <td>{{$bill -> tongTien}}</td>
+                            <td>{{$bill -> created_at}}</td>
                         </tr>
                     @endforeach
                 @endif

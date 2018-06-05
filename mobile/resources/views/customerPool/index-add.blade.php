@@ -13,7 +13,7 @@
 						<div class="row">
 
 							{!! Form::control('text', 4, 'hoTen', $errors, 'Họ tên') !!}
-							{!! Form::control('text', 4, 'email', $errors, 'Email') !!}
+							{!! Form::control('email', 4, 'email', $errors, 'Email') !!}
 							{!! Form::control('text', 4, 'sdt', $errors, 'SĐT') !!}
 							{!! Form::submit('Lưu lại', ['col-lg-12']) !!}
 

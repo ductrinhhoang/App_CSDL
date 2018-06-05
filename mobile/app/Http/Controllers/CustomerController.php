@@ -11,7 +11,7 @@ use App\Models\Customer;
 class CustomerController extends Controller
 {
     public function getShow(){
-        $customers = Customer::all();
+        $customers = Customer::all() -> reverse();
         return view('customerPool.index', compact('customers'));
     }
 }

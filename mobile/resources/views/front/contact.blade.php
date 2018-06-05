@@ -17,7 +17,6 @@
 						{!! Form::control('email', 6, 'email', $errors, 'Email') !!}
 						{!! Form::control('textarea', 12, 'message', $errors, 'Phản ánh của bạn') !!}
 						{!! Form::text('address', '', ['class' => 'hpet']) !!}		
-
 					  	{!! Form::submit('Lưu lại', ['col-lg-12']) !!}
 
 					</div>

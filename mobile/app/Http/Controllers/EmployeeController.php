@@ -10,7 +10,7 @@ use App\Http\Requests;
 class EmployeeController extends Controller
 {
     public function getShow(){
-        $employees = Employee::all();
+        $employees = Employee::all() -> reverse();
         return view('employeePool.index', compact('employees'));
     }
     public function delete($maNV){

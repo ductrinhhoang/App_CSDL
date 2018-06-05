@@ -13,7 +13,7 @@ use App\Http\Requests;
 class BillController extends Controller
 {
     public function getShow(){
-        $bills = Bill::all();
+        $bills = Bill::all() -> reverse();
         return view('billPool.index', compact('bills'));
     }
     public function getDetail($id){
