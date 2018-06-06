@@ -4,13 +4,15 @@
     <div class='col-md-12' style="padding: 0; border-radius: 5px; background: whitesmoke;margin-bottom: 10px">        
         <div class='col-md-12' style='margin: 10px'>
             <div class='col-md-1'><b>Lọc theo hãng: </b></div>
-            <div class='col-md-8' style='padding: 0'>
-                @foreach($manufactures as $manufacture)
-                    <a href='../san-pham/{{$manufacture->hangSX}}'>
-                        <button class='col-md-2 btn btn-primary' style='margin: 5px'>{{strtoupper($manufacture->hangSX)}}</button>
-                    </a>
-                @endforeach
-            </div>
+            @foreach($manufactures as $manufacture)
+                <a href='../san-pham/{{$manufacture->hangSX}}'>
+                    @if($manufacture->hangSX != $manuCurr)
+                        <button class='col-md-1 btn btn-default' style='margin: 5px'>{{strtoupper($manufacture->hangSX)}}</button>
+                    @else
+                        <button class='col-md-1 btn btn-primary' style='margin: 5px'>{{strtoupper($manufacture->hangSX)}}</button>
+                    @endif
+                </a>
+            @endforeach
             <a href='/tao-moi' style='margin: 10px'>
                 <button class='col-md-1 pull-right btn btn-success'>
                     <i class='glyphicon glyphicon-plus'></i>Tạo mới
