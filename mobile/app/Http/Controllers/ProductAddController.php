@@ -30,6 +30,7 @@ class ProductAddController extends Controller
         $post -> boNhoTrong = $request -> input('boNhoTrong');
         $post -> dungLuongPin = $request -> input('dungLuongPin');
         $post -> link = $request -> input('link');
+        $post -> khuyenMai = $request -> input('khuyenMai');
 
         $post -> save();
         // dd($post);

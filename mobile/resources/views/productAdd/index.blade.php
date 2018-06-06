@@ -27,12 +27,15 @@
 								<option>2 GB</option>
 								<option>3 GB</option>
 								<option>4 GB</option>
+								<option>6 GB</option>
+								<option>8 GB</option>
 							</select>
 						</div>
 						{!! Form::control('text', 4, 'mayAnhChinh', $errors, 'Máy ảnh chính') !!}
 						{!! Form::control('text', 4, 'boNhoTrong', $errors, 'Bộ nhớ trong') !!}
 						{!! Form::control('text', 4, 'dungLuongPin', $errors, 'Dung lượng pin') !!}
 						{!! Form::control('text', 4, 'link', $errors, 'Link sản phẩm') !!}
+						{!! Form::control('text', 4, 'khuyenMai', $errors, 'Khuyến mại') !!}
 
 					  	{!! Form::submit('Lưu lại', ['col-lg-12']) !!}
 
