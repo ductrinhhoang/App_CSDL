@@ -28,7 +28,7 @@
 							</select>
 						</div>
 
-						{!! Form::control('text', 4, 'diachi', $errors, 'Địa chỉ') !!}
+						{!! Form::control('text', 4, 'diaChi', $errors, 'Địa chỉ') !!}
 						{{--  {!! Form::control('text', 4, 'ngaySinh', $errors, 'Ngày sinh') !!}  --}}
 
 					  	{!! Form::submit('Lưu lại', ['col-lg-12']) !!}
