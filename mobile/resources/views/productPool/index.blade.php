@@ -3,11 +3,11 @@
 @section('main')
     <div class='col-md-12' style="padding: 0; border-radius: 5px; background: whitesmoke;margin-bottom: 10px">        
         <div class='col-md-12' style='margin: 10px'>
-            <div class='col-md-2'><b>Lọc theo hãng: </b></div>
-            <div class='col-md-5' style='padding: 0'>
+            <div class='col-md-1'><b>Lọc theo hãng: </b></div>
+            <div class='col-md-8' style='padding: 0'>
                 @foreach($manufactures as $manufacture)
-                    <a href='../san-pham/{{strtolower($manufacture)}}'>
-                        <button class='col-md-4 btn btn-primary' style='margin: 5px'>{{$manufacture}}</button>
+                    <a href='../san-pham/{{$manufacture->hangSX}}'>
+                        <button class='col-md-2 btn btn-primary' style='margin: 5px'>{{strtoupper($manufacture->hangSX)}}</button>
                     </a>
                 @endforeach
             </div>

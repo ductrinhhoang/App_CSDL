@@ -12,13 +12,13 @@ class ProductPoolController extends Controller
     
     public function getProductPool(){
         $products = ProductPool::all() -> reverse();
-        $manufactures = ['SAMSUNG', 'APPLE', 'HUAWEI', 'OPPO'];
+        $manufactures = ProductPool::select('hangSX') -> distinct() -> get();
         return view('productPool.index', compact('products', 'manufactures'));
     }
 
     public function getDetail($id){
         $products = ProductPool::where('maSP', $id) -> get();
-        $manufactures = ['SAMSUNG', 'APPLE', 'HUAWEI', 'OPPO'];
+        $manufactures = ProductPool::select('hangSX') -> distinct() -> get();
         return view('productPool.index', compact('products', 'manufactures'));
     }
 
@@ -32,7 +32,7 @@ class ProductPoolController extends Controller
     public function filterProduct($hangSX){
         $hangSX = strtolower($hangSX);
         $products = ProductPool::where('hangSX', $hangSX)->get();
-        $manufactures = ['SAMSUNG', 'APPLE', 'HUAWEI', 'OPPO'];
+        $manufactures = ProductPool::select('hangSX') -> distinct() -> get();
 
         return view('productPool.index', compact('products', 'manufactures'));
     }
